@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!--<Resource name="jdbc/connectorDs" auth="Container"
+        type="javax.sql.DataSource" username="postgres" password="viveksutar21"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://localhost:5432/Institute"
+        maxTotal="10" maxIdle="4" /> -->
+      
+        <Resource name="jdbc/connectorDs" auth="Container" type="javax.sql.DataSource"
+               maxActive="100" maxIdle="30" maxWait="10000"
+               username="postgres" password="viveksutar21"
+               driverClassName="org.postgresql.Driver"
+               url="jdbc:postgresql://localhost:5432/InstituteHub"/>
+        
+</Context>

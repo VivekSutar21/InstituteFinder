@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DetailForm | IntituteHUB</title>
+    <link rel="stylesheet" href="InstituteDetailForm.css" />
+    <script>
+      function validateForm() {
+        var inputs = document.querySelectorAll('input[type="text"], input[type="number"], input[type="date"]');
+        var isValid = true;
+        inputs.forEach(function(input) {
+          if (input.value.trim() === '') {
+            isValid = false;
+          }
+        });
+        if (!isValid) {
+          alert('Please fill in all the fields.');
+        }
+        return isValid;
+      }
+    </script>
+  </head>
+  <body>
+    <section class="container">
+      <header>Fill your institute details</header>
+      <form action="InstituteDetailsServlet" method="post" class="form" onsubmit="return validateForm()">
+        <div class="input-box">
+          <label for="IN">Institute Name</label>
+          <input type="text" name="InstituteName" id="IN" placeholder="Enter Institute name" required />
+        </div>
+        <div class="input-box">
+            <label for="ION">Institute Owner Name</label>
+            <input type="text" name="InstituteOwnerName" id="ION" placeholder="Enter Owner name" required />
+          </div>
+
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" name="EmailAddress" placeholder="Enter email address" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" name="PhoneNumber" placeholder="Enter phone number" required />
+          </div>
+          <div class="input-box">
+            <label>Established Date</label>
+            <input type="date" name="EstablishedDate" placeholder="EstablishedDate" required />
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" name="Address" placeholder="Enter street address" required />
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Number of Seats</label>
+            <input type="number" name="numberofSeats" placeholder="Enter Number of Seats" required />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Course Name</label>
+            <input type="text" name="1courseName" placeholder="Enter Course Name" required />
+          </div>
+          <div class="input-box">
+            <label>Course Price</label>
+            <input type="text" name="1coursePrice" placeholder="Enter Course Price" required />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Course Name</label>
+            <input type="text" name="2courseName" placeholder="Enter Course Name" required />
+          </div>
+          <div class="input-box">
+            <label>Course Price</label>
+            <input type="text" name="2coursePrice" placeholder="Enter Course Price" required />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Course Name</label>
+            <input type="text" name="3courseName" placeholder="Enter Course Name" required />
+          </div>
+          <div class="input-box">
+            <label>Course Price</label>
+            <input type="text" name="3coursePrice" placeholder="Enter Course Price" required />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Course Name</label>
+            <input type="text" name="4courseName" placeholder="Enter Course Name" required />
+          </div>
+          <div class="input-box">
+            <label>Course Price</label>
+            <input type="text" name="4coursePrice" placeholder="Enter Course Price" required />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Course Name</label>
+            <input type="text" name="5courseName" placeholder="Enter Course Name" required />
+          </div>
+          <div class="input-box">
+            <label>Course Price</label>
+            <input type="text" name="5coursePrice" placeholder="Enter Course Price" required />
+          </div>
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Course Name</label>
+            <input type="text" name="6courseName" placeholder="Enter Course Name" required />
+          </div>
+          <div class="input-box">
+            <label>Course Price</label>
+            <input type="text" name="6coursePrice" placeholder="Enter Course Price" required />
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>

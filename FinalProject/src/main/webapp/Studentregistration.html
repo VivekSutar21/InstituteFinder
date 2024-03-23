@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Student Registration | InstituteHub</title>
+    <link rel="stylesheet" href="Sregistration.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Student Registration</div>
+    <div class="content">
+      <form action="StudentRegisterServlet" method="post" onsubmit="return validateForm()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Name</span>
+            <input type="text" id="" name="firstName" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Surname</span>
+            <input type="text" id="" name="lastName" placeholder="Enter your surname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" id="" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" id="" name="phoneNumber" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" id="" name="password" placeholder="Enter your password" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+<script>
+  function validateForm() {
+        var firstname = document.getElementById("firstname").value;
+        var lastname = document.getElementById("lastname").value;
+        var email = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var password = document.getElementById("Password").value;
+
+        if (firstname === "") {
+            alert("First Name field cannot be empty");
+            return false;
+        }
+        if (lastname === "") {
+            alert("Last Name field cannot be empty");
+            return false;
+        }
+        if (email === "") {
+            alert("Email field cannot be empty");
+            return false;
+        }
+        if (phoneNumber === "") {
+            alert("Phone Number field cannot be empty");
+            return false;
+        }
+        if (Password === "") {
+            alert("Password field cannot be empty");
+            return false;
+        }
+        // If all fields are filled, form submission can proceed
+        return true;
+    }
+</script>
+</html>

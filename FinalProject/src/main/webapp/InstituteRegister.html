@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Institute Registration Form </title>
+    <link rel="stylesheet" href="InstituteRegister.css">
+</head>
+
+<body>
+    <section class="registration-container">
+        <h2> InstituteRegistration </h2>
+        <section class="details-section">
+            <form action="InstituteRegisterServlet" method="post" class="registration-form">
+                <!-- Personal Details Section -->
+                <h4> Institute Details </h4>
+                <section class="personal-details">
+                    <div class="three-details-item">
+                        <label for="fName">
+                            <p>Institute Name </p>
+                            <input type="text" name="InstituteName" id="InstitudeName" placeholder="Enter Institute name" required>
+                        </label>
+                        <label for="mName">
+                            <p>Owner Name</p>
+                            <input type="text" name="OwnerName" id="OwnerName" placeholder="Enter Owner name" required>
+                        </label>
+                    </div>
+
+                    <div class="three-details-item">
+                        <label for="email">
+                            <p>Email</p>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                        </label>
+                        <label for="ph">
+                            <p> Mobile Number</p>
+                            <input type="tel" name="phone" id="ph" placeholder="Enter mobile number" required>
+                        </label>
+                    </div>
+                </section>
+                <hr>
+                <!-- Identity Details Section -->
+                <h4>  </h4>
+                <section class="identity-details">
+                    <div class="three-details-item">
+                        <label for="address">
+                            <p> Address </p>
+                            <input type="text" name="address" id="address" placeholder="Enter your Address" required>
+                        </label>
+                    </div>
+                    <div class="three-details-item">
+                        <label for="password">
+                            <p>Password</p>
+                            <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                        </label>
+                    </div>
+                </section>
+                <button class="submit-btn"> Submit </button>
+            </form>
+        </section>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> InstituteHUB | Student</title> 
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+   </head>
+   <script
+   type="module"
+   src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+ ></script>
+ <script
+   nomodule
+   src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+ ></script>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Institute<span style="color: orangered;">HUB</span></a>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#contact-me">Contact</a></li>
+        <li><a href="#" id="form-open">Login</a></li>
+        <li><a href="Studentregistration.html">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="img" id="home" style="background-image: url(intimage.jpg);"> </div>
+  <div class="center" >
+    <div class="title" >InstituteHUB will help you</div>
+    <div class="sub_title">to Find best Institute across india</div>
+    <div class="btns">
+      <button>Learn More</button>
+      <button>Subscribe</button>
+    </div>
+  </div>
+  <!-- *********************** -->
+  
+<!--*******************************-->
+<!--Login-->
+<section class="home">
+  <div class="form_container">
+    <i class="uil uil-times form_close"></i>
+    <!-- Login From -->
+    <div class="form login_form">
+      <form action="StudentLoginServlet" method="post" id="loginForm">
+        <h2>Login</h2>
+        <div class="input_box">
+          <input type="text" id="username" name="username" placeholder="Enter your email" required />
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide"></i>
+        </div>
+        <div class="option_field">
+          <span class="checkbox">
+            <input type="checkbox" id="check" />
+            <label for="check">Remember me</label>
+          </span>
+          <a href="#" class="forgot_pw">Forgot password?</a>
+        </div>
+        <button class="button" type="submit">Login Now</button>
+        <!-- <input type="submit" value="Login"> -->
+        <div class="login_signup">Don't have an account? <a href="Studentregistration.html" id="signup">Signup</a></div>
+      </form>
+    </div>
+</section>
+
+  <!--************************-->
+  <!-- FOOTER -->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>Institute<span>HUB</span></h3>
+      <p class="footer-links">
+        <a href="#" class="link-1">Home</a>
+        
+        <a href="#">Blog</a>
+      
+        <a href="#">Pricing</a>
+      
+        <a href="#">About</a>
+        
+        <a href="#">Faq</a>
+        
+        <a href="#">Contact</a>
+      </p>
+
+      <p class="footer-company-name">InstituteHUB © 2023</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>ShivajiNagar, Pune</span> Maharashtra 411004</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91-7972879944</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@gmail.com">InstituteHub@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About the company</span>
+        We help Students and various Institutes to connect eachother.
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+  const formOpenBtn = document.querySelector("#form-open"),
+  home = document.querySelector(".home"),
+  formContainer = document.querySelector(".form_container"),
+  formCloseBtn = document.querySelector(".form_close"),
+  signupBtn = document.querySelector("#signup"),
+  loginBtn = document.querySelector("#login"),
+  pwShowHide = document.querySelectorAll(".pw_hide");
+formOpenBtn.addEventListener("click", () => home.classList.add("show"));
+formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
+pwShowHide.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    let getPwInput = icon.parentElement.querySelector("input");
+    if (getPwInput.type === "password") {
+      getPwInput.type = "text";
+      icon.classList.replace("uil-eye-slash", "uil-eye");
+    } else {
+      getPwInput.type = "password";
+      icon.classList.replace("uil-eye", "uil-eye-slash");
+    }
+  });
+});
+</script>
+</html>

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(36, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(pencils-1280558.jpg);
+    background-size: cover;
+}
+
+.registration-container {
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 3rem;
+    margin: 1rem;
+}
+
+.registration-container h2 {
+    font-weight: bolder;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.registration-container h2::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 3px;
+    width: 60%;
+    border-radius: 2px;
+    background-color: orangered;
+}
+
+.three-details-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+hr {
+    width: 70%;
+    height: 1px;
+    background-color: #d2d2d2;
+    margin: 1rem 0;
+    border: none;
+}
+
+.personal-details,
+.identity-details {
+    margin: .2rem 0;
+}
+
+.personal-details label,
+.identity-details label {
+    margin: .5rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.three-details-item input {
+    outline: none;
+    font-size: .9rem;
+    border-radius: .2rem;
+    border: 1px solid rgb(113, 101, 101);
+    padding: 1.5rem;
+    background-color: transparent;
+}
+
+.submit-btn {
+    border: none;
+    background-color: orangered;
+    color: white;
+    padding: .3rem 1rem;
+    display: block;
+    width: 50%;
+    margin: .6rem auto;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+}
